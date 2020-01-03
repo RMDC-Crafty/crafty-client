@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-     name='crafty-client',
+     name='crafty_client',
      version='1.0.0',
      description='A python library for talking to Crafty Web minecraft server control panel',
      author='kevdagoat',
@@ -10,5 +10,5 @@ setup(
           'requests',
           'urllib3',
       ],
-     packages=['crafty-client']
+     packages=['crafty_client']
 )
