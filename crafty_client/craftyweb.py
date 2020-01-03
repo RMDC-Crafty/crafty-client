@@ -110,7 +110,7 @@ class CraftyWeb():
     
     def get_server_logs(self, server_id):
         """Grabs the whole server log, raises ServerNotFound if crafty cannot find the server. Returned as list of dict."""
-        status, data, errors, messages = self._make_post_request(MCAPIRoutes.GET_LOGS, extra_params={'id': server_id})
+        status, data, errors, messages = self._make_get_request(MCAPIRoutes.GET_LOGS, extra_params={'id': server_id})
         
         if status == 200:
             return data
@@ -126,3 +126,21 @@ class CraftyWeb():
         elif status == 500:
             self._check_errors(errors, messages)
     
+    def get_host_stats(self):
+        """Grabs host PC stats from crafty"""
+        status, data, errors, messages = self._make_get_request(CraftyAPIRoutes.HOST_STATS)
+        
+        if status == 200:
+            return data
+        elif status == 500:
+            self._check_errors(errors, messages)
+    
+    def get_host_stats(self):
+        """Grabs (mc) server stats from crafty"""
+        status, data, errors, messages = self._make_get_request(CraftyAPIRoutes.SERVER_STATS)
+        
+        if status == 200:
+            return data
+        elif status == 500:
+            self._check_errors(errors, messages)
+

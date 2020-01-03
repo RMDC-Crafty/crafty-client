@@ -1,5 +1,6 @@
 class CraftyAPIRoutes(object):
-    STATS = '/api/v1/stats'    
+    HOST_STATS = '/api/v1/host_stats'    
+    SERVER_STATS = '/api/v1/server_stats' 
     ADD_USER = '/api/v1/crafty/add_user' 
     DEL_USER = '/api/v1/crafty/del_user' 
     GET_LOGS = '/api/v1/crafty/get_logs'
