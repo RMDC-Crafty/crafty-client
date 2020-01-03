@@ -1,8 +1,8 @@
 import requests
 from urllib.parse import urljoin
 
-from static.routes import MCAPIRoutes, CraftyAPIRoutes
-from static.exceptions import *
+from crafty_client.static.routes import MCAPIRoutes, CraftyAPIRoutes
+from crafty_client.static.exceptions import *
 
 # allow room for commander :)
 class CraftyWeb():
