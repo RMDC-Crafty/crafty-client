@@ -24,7 +24,7 @@ pip3 install crafty-client
 
 Example:
 ```python
-from crafty-client import CraftyWeb
+from crafty_client import CraftyWeb
 
 URL = "https://127.0.0.1:8000"    # The location of the crafty-web webserver
 API_TOKEN = "<place token here>"  # Your crafty Web API token, printed in the console at installation.
