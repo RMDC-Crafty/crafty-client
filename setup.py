@@ -10,5 +10,5 @@ setup(
           'requests',
           'urllib3',
       ],
-     packages=['crafty-web-client']
+     packages=['crafty-client']
 )
