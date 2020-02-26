@@ -59,7 +59,7 @@ class CraftyWeb():
         status, data, errors, messages = self._make_get_request(MCAPIRoutes.LIST)
             
         if status == 200:
-            if NameID:
+            if by_name:
                 y = 0
                 returnData = dict()
                 for items in data['servers']:
@@ -67,7 +67,7 @@ class CraftyWeb():
                     y += 1
                     returnData[y] = items.get("name", 0)
                 return returnData
-            if AllEssentials:
+            if all_data:
                 y = 0
                 returnData = dict()
                 for items in data['servers']:
