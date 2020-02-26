@@ -54,12 +54,34 @@ class CraftyWeb():
             data = route.json()
             return self._unpack_response(data)
         
-    def list_mc_servers(self):
+    def list_mc_servers(self, by_name=False, all_data=False):
         """Asks Crafty for a list of servers"""
         status, data, errors, messages = self._make_get_request(MCAPIRoutes.LIST)
             
         if status == 200:
-            return data['servers']
+            if by_name:
+                y = 0
+                returnData = dict()
+                for items in data['servers']:
+                    returnData[y] = items.get("id", 0)
+                    y += 1
+                    returnData[y] = items.get("name", 0)
+                return returnData
+            if all_data:
+                y = 0
+                returnData = dict()
+                for items in data['servers']:
+                    returnData[y] = items.get("id", 0)
+                    y += 1
+                    returnData[y] = items.get("name", 0)
+                    y += 1
+                    returnData[y] = items.get("running", 0)
+                    y = y + 1
+                    returnData[y] = items.get("auto_start", 0)
+                return returnData
+                del returnData
+            else:
+                return data['servers']
         elif status == 500:
             self._check_errors(errors, messages)
     
