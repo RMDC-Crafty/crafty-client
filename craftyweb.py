@@ -67,7 +67,6 @@ class CraftyWeb():
                     y += 1
                     returnData[y] = items.get("name", 0)
                 return returnData
-                del returnData
             if AllEssentials:
                 y = 0
                 returnData = dict()
