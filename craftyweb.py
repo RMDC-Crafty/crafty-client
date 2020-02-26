@@ -54,7 +54,7 @@ class CraftyWeb():
             data = route.json()
             return self._unpack_response(data)
         
-    def list_mc_servers(self, NameID=False, AllEssentials=False):
+    def list_mc_servers(self, by_name=False, all_data=False):
         """Asks Crafty for a list of servers"""
         status, data, errors, messages = self._make_get_request(MCAPIRoutes.LIST)
             
