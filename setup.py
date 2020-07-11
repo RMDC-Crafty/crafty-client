@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
      name='crafty_client',
-     version='1.0.0',
+     version='1.0.2',
      description='A python library for talking to Crafty Web minecraft server control panel',
      long_description=long_description,
      long_description_content_type="text/markdown",
@@ -15,5 +15,5 @@ setup(
           'requests',
           'urllib3',
       ],
-     packages=['crafty_client']
+     packages=['crafty_client', 'crafty_client.static']
 )
