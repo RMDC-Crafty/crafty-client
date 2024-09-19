@@ -1,5 +1,10 @@
 # Crafty-Client
 
+## OLD VERSION ALERT!
+
+Our development is now focused on Gitlab, please check out this repository over there!  
+https://gitlab.com/crafty-controller/crafty-client
+
 ## About
 
 Crafty Client is a pypi (pip) package for interfacing with the [Crafty Web MC server control panel](https://gitlab.com/crafty-controller/crafty-web).
